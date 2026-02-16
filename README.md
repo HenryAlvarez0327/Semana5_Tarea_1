@@ -4,8 +4,8 @@ Proyecto académico que implementa una aplicación web con arquitectura cliente-
 El sistema permite gestionar información mediante una API desarrollada en C#, la cual es consumida por una interfaz web construida con Angular. El objetivo del proyecto es demostrar la integración entre frontend y backend, así como la correcta organización de un sistema web completo.
 ## Estructura del proyecto
 Semana5_Tarea_1
-├── Api_Web      → Backend API (.NET / C#)
-└── Angular      → Frontend (Angular)
+- Api_Web: Backend API (.NET / C#)
+- Angular: Frontend (Angular)
 ## Tecnologías utilizadas
 - C#
 - .NET
