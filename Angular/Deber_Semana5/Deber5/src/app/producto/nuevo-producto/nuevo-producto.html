@@ -1,0 +1,38 @@
+<h1>{{ esEditar ? 'Editar Producto' : 'Nuevo Producto' }}</h1>
+
+<form class="form-card" [formGroup]="frmProducto" (ngSubmit)="guardar()">
+
+  <label>Nombre</label>
+  <input type="text" formControlName="nombre" />
+  <small class="error" *ngIf="frmProducto.get('nombre')?.touched && frmProducto.get('nombre')?.invalid">
+    Nombre es obligatorio
+  </small>
+
+  <label>Precio</label>
+  <input type="number" formControlName="precio" />
+  <small class="error" *ngIf="frmProducto.get('precio')?.touched && frmProducto.get('precio')?.invalid">
+    Precio inválido
+  </small>
+
+  <label>Stock</label>
+  <input type="number" formControlName="stock" />
+  <small class="error" *ngIf="frmProducto.get('stock')?.touched && frmProducto.get('stock')?.invalid">
+    Stock inválido
+  </small>
+
+  <label>Categoría</label>
+  <input type="text" formControlName="categoria" />
+  <small class="error" *ngIf="frmProducto.get('categoria')?.touched && frmProducto.get('categoria')?.invalid">
+    Categoría es obligatoria
+  </small>
+
+  <div class="acciones">
+    <button type="submit" class="btn-guardar">
+      {{ esEditar ? 'Actualizar' : 'Guardar' }}
+    </button>
+
+    <button type="button" class="btn-cancelar" (click)="cancelar()">
+      Cancelar
+    </button>
+  </div>
+</form>

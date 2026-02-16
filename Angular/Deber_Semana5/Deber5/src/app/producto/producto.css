@@ -1,0 +1,115 @@
+.titulo{
+  font-size: 40px;
+  font-weight: 800;
+  margin: 30px 0 12px;
+}
+
+.topbar{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.search{
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  outline: none;
+  font-size: 14px;
+}
+
+.search:focus{
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+}
+
+.btn-primary{
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover{ filter: brightness(.95); }
+
+.btn-light{
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+
+.tabla{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla thead{
+  background: #1f2937;
+  color: white;
+}
+
+.tabla th, .tabla td{
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla tbody tr:nth-child(even){
+  background: #f9fafb;
+}
+
+.acciones-col{
+  text-align: right;
+}
+
+.acciones{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-edit{
+  background: #f59e0b;
+  border: none;
+  color: #111827;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-del{
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-edit:hover, .btn-del:hover{
+  filter: brightness(.95);
+}
+
+.vacio{
+  text-align: center;
+  padding: 16px;
+  color: #6b7280;
+}

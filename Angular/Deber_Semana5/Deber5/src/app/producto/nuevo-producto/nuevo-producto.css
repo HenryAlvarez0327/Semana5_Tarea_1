@@ -1,0 +1,54 @@
+.form-card{
+  width: min(720px, 95%);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+label{
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+input{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+input:focus{
+  border-color: #2563eb;
+}
+
+.error{
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+.acciones{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-guardar{
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancelar{
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #94a3b8;
+  background: transparent;
+  cursor: pointer;
+}

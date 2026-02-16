@@ -1,0 +1,58 @@
+<h1 class="titulo">Lista de Productos</h1>
+
+<div class="topbar">
+  <input
+    class="search"
+    type="text"
+    placeholder="Buscar por nombre, categoría, precio o stock..."
+    [(ngModel)]="filtro"
+    (input)="aplicarFiltro()"
+  />
+
+  <button class="btn-primary" type="button" (click)="irNuevo()">
+    Nuevo Producto
+  </button>
+
+  <button class="btn-light" type="button" (click)="limpiarFiltro()">
+    Limpiar
+  </button>
+</div>
+
+<div class="card">
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Categoría</th>
+        <th class="acciones-col">Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of productosFiltrados; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.precio }}</td>
+        <td>{{ p.stock }}</td>
+        <td>{{ p.categoria }}</td>
+
+        <td class="acciones">
+          <button class="btn-edit" type="button" (click)="irEditar(p.id)">
+            Editar
+          </button>
+
+          <button class="btn-del" type="button" (click)="eliminarProducto(p.id)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+
+      <tr *ngIf="productosFiltrados.length === 0">
+        <td colspan="6" class="vacio">No hay productos para mostrar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
